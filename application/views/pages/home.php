@@ -1,0 +1,1 @@
+This is content of the page home.php

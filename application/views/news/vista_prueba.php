@@ -1,0 +1,1 @@
+<h2>El parametro de la URL es: <?php echo $parametro; ?></h2>

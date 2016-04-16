@@ -62,21 +62,6 @@ $route['user']['post']		    = 'user/createUser';
 $route['user/(:num)']['DELETE'] = 'user/deleteUser/$1';
 $route['user/(:num)']['PUT']	= 'user/updateUser/$1';
 
-
-// $route['user']['post']= 'user/post_user';
-$route['user/create']= 'user/create';
-
-$route['news/create']= 'news/create';
-
-$route['news/probar']['get'] = 'probar/metodo_get';
-$route['news/probar']['post'] = 'probar/metodo_post';
-$route['news/probar']['put'] = 'probar/metodo_put';
-$route['news/probar']['delete'] = 'probar/metodo_delete';
-
-$route['news/(:any)'] = 'news/view/$1';
-$route['news'] = 'news';
-$route['news/oso/(:any)'] = 'news/prueba/$1';
-$route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';
 
 

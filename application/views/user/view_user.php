@@ -1,6 +1,6 @@
 
 <center><h1><?php echo $title ?></h1></center>
-<div style="width:60%;margin:0 auto;">
+<div class="content-table">
 	<table class="table table-bordered">
 		<thead>
 			<tr>

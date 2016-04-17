@@ -12,7 +12,6 @@ class User extends CI_Controller {
         {
             $this->load->helper('form');
             $data['user_item'] = $this->user_model->readUsers();
-            // $data['title']     = "User list";
             if (empty($data['user_item'])) {
                show_404();
             }
@@ -33,10 +32,9 @@ class User extends CI_Controller {
 
         public function createUser()
         {
-
             $this->load->helper('form');
             $this->user_model->createUser();
-            $data['user_item'] = $this->user_model->readUsers(); //voy a buscar los datos de la BD
+            $data['user_item'] = $this->user_model->readUsers(); 
             $data['title']     = "éxito en la inserción";
             $this->load->view('templates/header', $data);
             $this->load->view('user/view_users', $data);
@@ -45,11 +43,6 @@ class User extends CI_Controller {
         public function deleteUser($id = NULL)
         {
             $this->user_model->deleteUser($id);
-        } 
-
-        public function updateUser($id = NULL)
-        {
-            $this->user_model->updateUser($id);
         }    
 }
 

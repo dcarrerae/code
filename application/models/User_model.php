@@ -34,13 +34,6 @@ class User_model extends CI_Model {
 		    $this->load->helper('url');
 		    return $this->db->delete('user', array('id' => $id)); 
 		}
-
-		public function updateUser($id = FALSE)
-		{
-			$this->db->set('name', 'Diego');
-			$this->db->where('id', $id);
-			$this->db->update('user');
-		}
 }
 
 

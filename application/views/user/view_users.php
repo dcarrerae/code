@@ -1,6 +1,6 @@
 
 <body>
-	<div style="width:300px;margin:0 auto;">
+	<div class="content-form">
 		<form action="user" method="post" >
 			<div class="form-group">
 		    	<label for="exampleInputEmail1">First Name</label>
@@ -18,7 +18,7 @@
 		</form>
 	</div>
 
-	<div style="width:60%;margin:0 auto;">
+	<div class="content-table">
 		<table class="table table-bordered">
 			<thead>
 				<tr>

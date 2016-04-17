@@ -1,31 +1,24 @@
-<head>
-	<style type="text/css">
-		table,tr,td{
-			border:1px solid black;
-		}
-	</style>
-</head>
 
-<h1><?php echo $title ?></h1>
+<center><h1><?php echo $title ?></h1></center>
+<div style="width:60%;margin:0 auto;">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>Name</td>
+				<td>Surname</td>
+				<td>Email</td>
+			</tr>
+		</thead>
+		<?php foreach ($user_item as $data): ?>
+			<tr>
+				<td><?php echo $data['id']; ?></td>
+				<td><?php echo $data['name']; ?></td>
+				<td><?php echo $data['surname']; ?></td>
+				<td><?php echo $data['email']; ?></td>
+			</tr>   
+		<?php endforeach; ?>
+	</table>
+</div>
 
-<!-- <table style="border:1px solid black;"> -->
-	<table style="border:1px solid black;">
-	<thead>
-		<tr>
-			<!-- <td>ID</td> -->
-			<td>Name</td>
-			<td>Surname</td>
-			<td>Email</td>
-		</tr>
-	</thead>
-<?php foreach ($user_item as $data): ?>
-		<tr >
-			<td ><h3><?php echo $data['name']; ?></h3></td>
-			<td ><h3><?php echo $data['surname']; ?></h3></td>
-			<td ><h3><?php echo $data['email']; ?></h3></td>
-		</tr>
-	
-       
-<?php endforeach; ?>
-
-</table>
+<center><a class="btn btn-default" href="../user">Back to user list</a></center>

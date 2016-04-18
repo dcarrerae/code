@@ -57,6 +57,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $route['(:any)'] = 'pages/view/$1';
 
 $route['user']['get']		    = 'user/index';
+$route['users']['get']		    = 'user/readUsers';
+
+
 $route['user/(:num)']['get']    = 'user/readUser/$1';
 $route['user']['post']		    = 'user/createUser';
 $route['user/(:num)']['DELETE'] = 'user/deleteUser/$1';

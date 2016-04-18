@@ -9,7 +9,21 @@ class User_model extends CI_Model {
 		public function readUsers()
 		{
 		    $query = $this->db->query('select * from user');
-		    return $query->result_array();   
+
+			// $obj = $query->result_array();
+			// print_r($obj[0]['id']);
+			// print_r("-----");
+			//------->bueno--------
+			// $objj = json_encode($query->result_array());
+			// $objj = json_decode($objj);
+			// echo $objj[1]->name;
+			// echo "</br>";
+			// foreach ($objj as $product) {
+			//     print_r($product->id);
+			//     echo ("</br>");
+			// }
+			//-------->bueno-----------
+		    return json_encode($query->result_array());   
 		}
 
 		public function readUser($id = FALSE)

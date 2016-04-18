@@ -1,4 +1,17 @@
-<h1><?php echo $title; ?></h1>
+
+<!--<?php echo $json ?>-->
+<?php 
+			// $json = json_encode($json);
+			$objj = json_decode($json);
+			echo $objj[1]->name;
+			echo "</br>";
+			foreach ($objj as $product) {
+			    print_r($product->id);
+			    echo ("</br>");
+			}
+?>
+
+<!-- 
 
 <head>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -64,3 +77,4 @@
 </body>
 
 
+ -->

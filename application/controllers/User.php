@@ -11,22 +11,26 @@ class User extends CI_Controller {
         public function index()
         {
             $this->load->helper('form');
-            $data['user_item'] = $this->user_model->readUsers();
-            $data['title']     = "This is the users";
-            if (empty($data['user_item'])) {
-               show_404();
-            }
+            $data['json'] = $this->user_model->readUsers();
+
+            // echo $data;
+            // $obj = json_decode($data['hola']);
+            // print($obj[0]);
+
+            // print($data);
+            // print($data['hola']);
+            // $data['title']     = "This is the users";
+            // if (empty($data['user_item'])) {
+            //    show_404();
+            // }
             $this->load->view('user/view_users', $data);
         }
 
-        public function readUser($id = NULL)
+        public function readUsers()
         {
-            $data['user_item'] = $this->user_model->readUser($id);
-            if (empty($data['user_item'])) {
-                show_404();
-            }
-            $data['title'] = "This is the user";
-            $this->load->view('user/view_user', $data);
+            $this->load->helper('form');
+            $data['json'] = $this->user_model->readUsers();
+            echo $data['json'];
         }       
 
         public function createUser()
